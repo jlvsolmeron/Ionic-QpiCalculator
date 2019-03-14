@@ -1,4 +1,4 @@
-<ion-header class="header">
+<ion-header>
   <ion-toolbar>
     <ion-title>
       QPI Calculator
@@ -6,32 +6,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <div class="container">
+<ion-content>
       <div class="head">
-        <ion-textarea value="{{grade_in}}"></ion-textarea>
-        <ion-input value="{{grade_ans}}"></ion-input>
+        <ion-textarea class="inputs" value="{{grade_in}}"></ion-textarea>
+        <ion-input class="output" value="{{grade_ans}}"></ion-input>
       </div>    
       
       <div class="buttons">
         <ion-grid>
-          <ion-row style="background-color: green">
-            <ion-col><ion-button (click)="store(12); display('(A)')" expand="full">A</ion-button></ion-col>
-            <ion-col><ion-button (click)="store(10.5); display('(B+)')" expand="full">B+</ion-button></ion-col>
-            <ion-col><ion-button (click)="store(9); display('(B)')" expand="full">B</ion-button></ion-col>
+          <ion-row>
+            <ion-col><ion-button shape="round" color="medium" class="buttonRound" (click)="store(12); display('(A)')" expand="full">A</ion-button></ion-col>
+            <ion-col><ion-button shape="round" color="medium" class="buttonRound" (click)="store(10.5); display('(B+)')" expand="full">B+</ion-button></ion-col>
+            <ion-col><ion-button shape="round" color="medium" class="buttonRound" (click)="store(9); display('(B)')" expand="full">B</ion-button></ion-col>
           </ion-row>
-          <ion-row style="background-color: blue">
-            <ion-col><ion-button (click)="store(7.5); display('(C+)')">C+</ion-button></ion-col>
-            <ion-col><ion-button (click)="store(6); display('(C)')">C</ion-button></ion-col>
-            <ion-col><ion-button (click)="store(3); display('(D)')">D</ion-button></ion-col>
+          <ion-row>
+            <ion-col><ion-button shape="round" color="medium" class="buttonRound" (click)="store(7.5); display('(C+)')">C+</ion-button></ion-col>
+            <ion-col><ion-button shape="round" color="medium" class="buttonRound" (click)="store(6); display('(C)')">C</ion-button></ion-col>
+            <ion-col><ion-button shape="round" color="medium" class="buttonRound" (click)="store(3); display('(D)')">D</ion-button></ion-col>
           </ion-row>
-          <ion-row style="background-color: yellow">
-            <ion-col><ion-button (click)="store(0); display('(F)')">F/FD</ion-button></ion-col>
-            <ion-col><ion-button (click)="clear()">Clear</ion-button></ion-col>
-            <ion-col><ion-button (click)="compute()">=</ion-button></ion-col>
+          <ion-row>
+            <ion-col><ion-button shape="round" color="medium" class="buttonRound" (click)="store(0); display('(F)')">F/FD</ion-button></ion-col>
+            <ion-col><ion-button shape="round" color="light" class="buttonRound" (click)="clear()">Clear</ion-button></ion-col>
+            <ion-col><ion-button shape="round" color="danger" class="buttonRound" (click)="compute()">=</ion-button></ion-col>
           </ion-row>
         </ion-grid>
       </div>
         
-    </div>
 </ion-content>

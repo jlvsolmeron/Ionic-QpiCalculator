@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  array = []; grade_in = null; grade_ans = null; count = 0; 
+  array = []; grade_in = null; grade_ans = "0.00"; count = 0; 
   totalUnits = 0; sum = 0; result = 0; num = 0;
 
   store(value){
@@ -18,7 +18,7 @@ export class HomePage {
   clear(){
     this.array = []; this.count = 0;
     this.sum = 0; this.grade_in = null;
-    this.grade_ans = null; this.totalUnits = 0;
+    this.grade_ans = "0.00"; this.totalUnits = 0;
     this.result = 0;
   }
   display(value){
@@ -39,6 +39,6 @@ export class HomePage {
       this.sum = this.sum + this.array[this.num];
     }
 
-    this.grade_ans = this.sum + " / " + this.totalUnits + " = " + (this.sum / this.totalUnits).toFixed(2);
+    this.grade_ans = (this.sum / this.totalUnits).toFixed(2);
   }
 }
