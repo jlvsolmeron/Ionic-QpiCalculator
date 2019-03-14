@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="header">
   <ion-toolbar>
     <ion-title>
       QPI Calculator
@@ -7,6 +7,31 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <div class="container">
+      <div class="head">
+        <ion-textarea value="{{grade_in}}"></ion-textarea>
+        <ion-input value="{{grade_ans}}"></ion-input>
+      </div>    
+      
+      <div class="buttons">
+        <ion-grid>
+          <ion-row style="background-color: green">
+            <ion-col><ion-button (click)="store(12); display('(A)')" expand="full">A</ion-button></ion-col>
+            <ion-col><ion-button (click)="store(10.5); display('(B+)')" expand="full">B+</ion-button></ion-col>
+            <ion-col><ion-button (click)="store(9); display('(B)')" expand="full">B</ion-button></ion-col>
+          </ion-row>
+          <ion-row style="background-color: blue">
+            <ion-col><ion-button (click)="store(7.5); display('(C+)')">C+</ion-button></ion-col>
+            <ion-col><ion-button (click)="store(6); display('(C)')">C</ion-button></ion-col>
+            <ion-col><ion-button (click)="store(3); display('(D)')">D</ion-button></ion-col>
+          </ion-row>
+          <ion-row style="background-color: yellow">
+            <ion-col><ion-button (click)="store(0); display('(F)')">F/FD</ion-button></ion-col>
+            <ion-col><ion-button (click)="clear()">Clear</ion-button></ion-col>
+            <ion-col><ion-button (click)="compute()">=</ion-button></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+        
+    </div>
 </ion-content>
