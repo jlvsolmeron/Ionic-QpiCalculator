@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   array = []; grade_in = null; grade_ans = "0.00"; count = 0; 
-  totalUnits = 0; sum = 0; result = 0; num = 0;
+  totalUnits = 0; sum = 0; num = 0;
 
   store(value){
     if(this.count > 0){
@@ -19,7 +19,6 @@ export class HomePage {
     this.array = []; this.count = 0;
     this.sum = 0; this.grade_in = null;
     this.grade_ans = "0.00"; this.totalUnits = 0;
-    this.result = 0;
   }
   display(value){
     if(this.array.length == 1){
